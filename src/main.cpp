@@ -18,11 +18,11 @@ int main(int argc, char *argv[])
     if (argc > 1)
     {
         std::string command = argv[1];
-        if (command == "execute" && argc > 2)
+        if (command == "execute" && argv[2] && argv[3])
         {
             manager.executeProblem(argv[2], argv[3]);
         }
-        else if (command == "verify" && argc > 4)
+        else if (command == "verify" && argv[2] && argv[3] && argv[4])
         {
             manager.verifyProblem(argv[2], argv[3], argv[4]);
         }
